@@ -1,6 +1,6 @@
 {
   "name": "djs-cmd-gen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cut the fuss of creating a new discord bot. Get started instantly with many options to choose from! djs-cmd-gen will handle all the code to create your command handler, letting you get started ASAP!",
   "main": "index.js",
   "scripts": {
