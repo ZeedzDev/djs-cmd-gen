@@ -13,9 +13,17 @@
     "djs-cmd-gen",
     "djs"
   ],
-  "author": "zeedz",
+  "author": "Zeedz",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.5.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeedzdev/djs-cmd-gen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zeedzdev/djs-cmd-gen/issues"
+  },
+  "homepage": "https://github.com/zeedzdev/djs-cmd-gen#readme"
 }

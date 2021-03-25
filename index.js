@@ -31,6 +31,7 @@ module.exports = {
     client.commands = new Discord.Collection();
     client.aliases = new Discord.Collection();
     client.usage = new Discord.Collection();
+    client.description = new Discord.Collection();
 
     let commands = fs
       .readdirSync(`./commands/`)
@@ -46,9 +47,12 @@ module.exports = {
         if (pull.aliases && Array.isArray(pull.aliases))
           pull.aliases.forEach((alias) => client.aliases.set(alias, pull.name));
         if (pull.usage) client.usage.set(pull.usage, pull.name);
+        if (pull.description)
+          client.description.set(pull.description, pull.name);
       });
 
     if (useCategories) {
+      client.categories = fs.readdirSync(`./commands/`);
       fs.readdirSync("./commands/").forEach((dir) => {
         console.log(dir);
         commands = fs
@@ -68,7 +72,8 @@ module.exports = {
               client.aliases.set(alias, pull.name)
             );
           if (pull.usage) client.usage.set(pull.usage, pull.name);
-          console.log(client.commands);
+          if (pull.description)
+            client.description.set(pull.description, pull.name);
         }
       });
     }
